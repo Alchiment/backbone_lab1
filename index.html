@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Practica con backbonejs</title>
+</head>
+<body>
+	<div id="AppControl">
+		<div id="area">
+			<input type="text" placeholder="nombre" id="txt_nombre">
+			<input type="text" placeholder="apellidos" id="txt_apellidos">
+			<input type="text" placeholder="cedula" id="txt_cedula">
+			<button id="btn_nuevo">Nuevo</button>
+			&nbsp;
+			&nbsp;
+			<button id="btn_guardar">Guardar</button>
+			&nbsp;
+			&nbsp;
+			<button id="btn_imp">Imprimir</button>
+		</div>
+		<div id="impr"></div>
+		<div id="result"></div>
+	</div>
+	<script type="text/template" id="tplcliente">
+		<ul>
+			<li>
+				Nombre: <strong> <%= nombre %></strong>
+			</li>
+			<li>
+				Apellidos: <strong> <%= apellidos %> </strong>
+			</li>
+			<li>
+				Cedula: <strong> <%= cedula %> </strong>
+			</li>
+		</ul>
+		<hr>
+	</script>
+	<script src="js/vendor/jquery.js"></script>
+	<script src="js/vendor/underscore.js"></script>
+	<script src="js/vendor/backbone.js"></script>
+	<script src="js/model/cliente_model.js"></script>
+	<script src="js/collection/cl_clientes.js"></script>
+	<script src="js/view/cliente_view.js"></script>
+	<script src="js/view/app_view.js"></script>
+	<script src="js/app.js"></script>
+</body>
+</html>
